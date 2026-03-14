@@ -45,7 +45,7 @@ minilibx:
 	cd $(LIB_PATH) && make
 
 %.o: %.c fractol.h
-	$(CC) $(FLAGS) -g -c $< -o obj/$@
+	$(CC) -g -c $< -o obj/$@
 
 $(NAME): $(OBJ)
 	cd obj && $(CC) $(OBJ) -o ../$(NAME) $(FLAGS) -L../$(LIB_PATH) -I../$(LIB_PATH)
